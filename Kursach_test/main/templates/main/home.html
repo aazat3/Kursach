@@ -1,0 +1,24 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Главная страница</h1>
+    {% for el in rim %}
+        <div class="alert alert-warning mt-2">
+            <h3>id-{{ el.id_rim }}   цвет-{{ el.id_color.name_color }}   производитель-{{ el.manufact }}   цена-{{ el.price }}</h3>
+        </div>
+    {% endfor %}
+    {% for el in lenses %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.id_lenses }}</h3>
+        </div>
+    {% endfor %}
+    {% for el in accessories %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.id_accessories }}</h3>
+        </div>
+    {% endfor %}
+{% endblock %}
